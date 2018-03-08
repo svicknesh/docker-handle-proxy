@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  jetty-handle-proxy:
+    image: jetty 
+    container_name: jetty-handle-proxy
+    restart: always
+    volumes:
+      - ./hps:/var/lib/jetty/webapps 
+    ports:
+      - 8080:8080/tcp
+
